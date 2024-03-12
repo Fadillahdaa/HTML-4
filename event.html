@@ -55,6 +55,14 @@
                 height:auto;
             }
             }
+        /* CSS untuk styling */
+        img {
+            transition: transform 0.3s; /* Efek transisi saat perubahan */
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Perbesar gambar saat hover */
+        }
         </style>
     </head>
     <body>
@@ -79,8 +87,25 @@
                 <img src="gambar/gambar1.jpg" width="25%"  high="30%"  alt="Ini gambar yang bagus">
                 <img src="gambar/gambar2.jpg" width="25%" high="30%" alt="Ini gambar yang bagus">
                 <img src="gambar/gambar4.jpg" width="25%" high="30%" alt="Ini gambar yang bagus">
-                <img src="gambar/Gambar-Pemandangan.webp" width="25%" high="30%" alt="Ini gambar yang bagus">
-                <img src="gambar/gambar.jpg" width="25%" high="30%" alt="Ini gambar yang bagus">
+                <img src="gambar/gambar5.jpg" width="25%" high="30%" alt="Ini gambar yang bagus">
+                <img src="gambar/gambar6.jpg" width="25%" high="30%" alt="Ini gambar yang bagus">
+
+                <script>
+                    // JavaScript untuk menambahkan event mouse pada gambar
+                    const images = document.querySelectorAll('img'); // Mengambil semua elemen gambar
+            
+                    // Menambahkan event mouseover untuk memperbesar gambar
+                    images.forEach(img => {
+                        img.addEventListener('mouseover', () => {
+                            img.style.transform = 'scale(1.1)';
+                        });
+            
+                        // Menambahkan event mouseout untuk mengembalikan ukuran gambar ke semula
+                        img.addEventListener('mouseout', () => {
+                            img.style.transform = 'scale(1)';
+                        });
+                    });
+                    </script> 
             </article>
         </section>
         <footer>
